@@ -36,13 +36,15 @@ public class SendToAnimal extends HttpServlet {
             response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             String type= "";
+            String ani = request.getParameter("animal");
+            System.out.println(ani);
 //             String type= request.getParameter("type");
             GetInfor gi= new GetInfor();
             ArrayList<Ani> aniList= gi.GetAllAni(type);
+            request.setAttribute("ani", ani);
             request.setAttribute("AniListData", aniList );
             System.out.println("run SendToAnimal");
-            request.getRequestDispatcher("Animal.jsp").forward(request, response);
-            
+            request.getRequestDispatcher("ListAnimal.jsp").forward(request, response);         
         }
     }
 

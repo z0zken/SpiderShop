@@ -21,7 +21,11 @@
         </style>
     </head>
     <body>
-        <div class="row">
+        <!--header-->
+        <!--duoc boc boi 1 cai row-->
+        <!--col-3-->
+        <!--col -9-->
+        <div class="row justify-content-center">
             <%ArrayList<Ani> std
                         = (ArrayList<Ani>) request.getAttribute("AniListData");
                 System.out.println("length: " + std.size());
@@ -39,23 +43,27 @@
 
                 <div class=".ani-block">
                     <%try {%>
-                    <jsp:include page="ContentSubJSP/newjsp.jsp" >
+                    <jsp:include page="ContentSubJSP/BlockAn.jsp" >
+
+                        <jsp:param name="id" value="<%=std.get(i).getId_ani()%>" />
+
                         <jsp:param name="img_link1" value="<%=std.get(i).getImg_url().get(0)%>" />
-                        
+
                         <jsp:param name="img_link2" value="<%=std.get(i).getImg_url().get(1)%>" />
-                        
+
                         <jsp:param name="price" value="<%=std.get(i).getPrice()[0]%>" />
-                        
+
                         <jsp:param name="name" value="<%=std.get(i).getName_ani()%>" />
-                        
+
                     </jsp:include>
                     <%} catch (Exception e) {
-        System.out.println("this is id wrong: " + std.get(1).getId_ani());
-    }%>
-
+                            System.out.println("this is id wrong: " + std.get(1).getId_ani());
+                        }%>
                 </div>
+
             </div>
             <%}%>
         </div>
+        <!--footer-->
     </body>
 </html>

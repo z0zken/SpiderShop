@@ -21,8 +21,8 @@
         <servlet-class>Action.SendToAnimal</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CheckLogin</servlet-name>
-        <servlet-class>Action.CheckLogin</servlet-class>
+        <servlet-name>SendToDescribe</servlet-name>
+        <servlet-class>Action.SendToDescribe</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ViewAll</servlet-name>
@@ -45,8 +45,8 @@
         <url-pattern>/SendToAnimal</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>CheckLogin</servlet-name>
-        <url-pattern>/CheckLogin</url-pattern>
+        <servlet-name>SendToDescribe</servlet-name>
+        <url-pattern>/describe</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

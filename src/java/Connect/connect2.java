@@ -13,17 +13,17 @@ public class connect2 {
 
     String databaseName = "SpiderShop";
     String user = "sa";
-    String password = "nguyenanhviet";
+    String password = "sa";
 
     public void setDatabaseName(String databaseName) {
         this.databaseName = databaseName;
     }
 
-    public Connection getConnection(String name) {
-        if (name!="") databaseName= name;
+    public Connection getConnection() {
+//        if (databaseName!="") this.databaseName= databaseName;
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String connectionUrl = "jdbc:sqlserver://MSI\\SQLEXPRESS:1433;databaseName=" + databaseName + "; Encrypt=false;";
+            String connectionUrl = "jdbc:sqlserver://LAPTOP-4L2UCUGO\\DUYKHANHS\\SQLEXPRESS:1433;databaseName=" + databaseName + "; Encrypt=false;";
             Connection con = DriverManager.getConnection(connectionUrl, user, password);
             System.out.println("True at connection");
             return con;
@@ -36,7 +36,7 @@ public class connect2 {
 
     public static void main(String args[]) {
         System.out.println("begin");
-        Connection cnn = new connect2().getConnection("");
+        Connection cnn = new connect2().getConnection();
         String Query = "Select * from nguoidung";
         PreparedStatement ps;
         ResultSet rs;

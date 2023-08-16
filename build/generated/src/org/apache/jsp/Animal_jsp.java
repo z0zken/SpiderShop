@@ -43,26 +43,30 @@ public final class Animal_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
-      out.write("<html>\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <title>JSP Page</title>\r\n");
-      out.write("        <link href=\"bootstrap-5.0.2-dist/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n");
-      out.write("        <style>\r\n");
-      out.write("            .ani-block{\r\n");
-      out.write("                width: 100%;\r\n");
-      out.write("\r\n");
-      out.write("            }\r\n");
-      out.write("        </style>\r\n");
-      out.write("    </head>\r\n");
-      out.write("    <body>\r\n");
-      out.write("        <div class=\"row\">\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title>JSP Page</title>\n");
+      out.write("        <link href=\"bootstrap-5.0.2-dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("        <style>\n");
+      out.write("            .ani-block{\n");
+      out.write("                width: 100%;\n");
+      out.write("\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("        <!--header-->\n");
+      out.write("        <!--duoc boc boi 1 cai row-->\n");
+      out.write("        <!--col-3-->\n");
+      out.write("        <!--col -9-->\n");
+      out.write("        <div class=\"row justify-content-center\">\n");
       out.write("            ");
 ArrayList<Ani> std
                         = (ArrayList<Ani>) request.getAttribute("AniListData");
@@ -77,30 +81,31 @@ ArrayList<Ani> std
                 } catch (Exception e) {
                 }
                 for (int i = 0; i < std.size(); i++) {
-      out.write("\r\n");
-      out.write("            <div class=\"row col-md-3\">\r\n");
-      out.write("\r\n");
-      out.write("                <div class=\".ani-block\">\r\n");
+      out.write("\n");
+      out.write("            <div class=\"row col-md-3\">\n");
+      out.write("\n");
+      out.write("                <div class=\".ani-block\">\n");
       out.write("                    ");
 try {
-      out.write("\r\n");
+      out.write("\n");
       out.write("                    ");
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "ContentSubJSP/newjsp.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("img_link1", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getImg_url().get(0)), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("img_link2", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getImg_url().get(1)), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("price", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getPrice()[0]), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("name", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getName_ani()), request.getCharacterEncoding()), out, false);
-      out.write("\r\n");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "ContentSubJSP/BlockAn.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("id", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getId_ani()), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("img_link1", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getImg_url().get(0)), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("img_link2", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getImg_url().get(1)), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("price", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getPrice()[0]), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("name", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(std.get(i).getName_ani()), request.getCharacterEncoding()), out, false);
+      out.write("\n");
       out.write("                    ");
 } catch (Exception e) {
-        System.out.println("this is id wrong: " + std.get(1).getId_ani());
-    }
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("                </div>\r\n");
-      out.write("            </div>\r\n");
+                            System.out.println("this is id wrong: " + std.get(1).getId_ani());
+                        }
+      out.write("\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("            </div>\n");
       out.write("            ");
 }
-      out.write("\r\n");
-      out.write("        </div>\r\n");
-      out.write("    </body>\r\n");
-      out.write("</html>\r\n");
+      out.write("\n");
+      out.write("        </div>\n");
+      out.write("        <!--footer-->\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
